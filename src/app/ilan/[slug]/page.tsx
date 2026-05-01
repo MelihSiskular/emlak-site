@@ -5,6 +5,12 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+type ListingImage = {
+  id: string;
+  image_url: string;
+  sort_order: number;
+};
+
 function formatPrice(price: number, currency: string) {
   return new Intl.NumberFormat("tr-TR", {
     style: "currency",
@@ -51,8 +57,9 @@ export default async function ListingDetail({ params }: PageProps) {
     );
   }
 
-  const images =
-    data.listing_images?.slice().sort((a, b) => a.sort_order - b.sort_order) ?? [];
+  const images = ((data.listing_images ?? []) as ListingImage[])
+  .slice()
+  .sort((a, b) => a.sort_order - b.sort_order);
 
   const mainImage = images[0]?.image_url ?? null;
   const sideImages = images.slice(1, 5);
