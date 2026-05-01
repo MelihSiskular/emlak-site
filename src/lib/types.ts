@@ -1,0 +1,27 @@
+export type Listing = {
+  id: string;
+  title: string;
+  slug: string;
+  description: string | null;
+  price: number;
+  currency: string;
+  listing_type: string;
+  property_type: string;
+  city: string;
+  district: string;
+  neighborhood: string | null;
+  gross_m2: number | null;
+  net_m2: number | null;
+  room_count: string | null;
+  bathroom_count: number | null;
+  floor_number: string | null;
+  building_age: number | null;
+  address: string | null;
+  map_url: string | null;
+  phone: string | null;
+  whatsapp_phone: string | null;
+  is_featured: boolean;
+  is_published: boolean;
+  created_at: string;
+  updated_at: string;
+};
