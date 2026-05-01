@@ -11,6 +11,8 @@ type ListingImage = {
   sort_order: number;
 };
 
+
+
 function formatPrice(price: number, currency: string) {
   return new Intl.NumberFormat("tr-TR", {
     style: "currency",
@@ -57,12 +59,13 @@ export default async function ListingDetail({ params }: PageProps) {
     );
   }
 
-  const images = ((data.listing_images ?? []) as ListingImage[])
+const images = (data.listing_images ?? [])
   .slice()
-  .sort((a, b) => a.sort_order - b.sort_order);
+  .sort((a: any, b: any) => a.sort_order - b.sort_order);
 
   const mainImage = images[0]?.image_url ?? null;
-  const sideImages = images.slice(1, 5);
+  const sideImages: ListingImage[] = images.slice(1, 5);
+
 
   const whatsappMessage = `Merhaba, ${data.title} ilanı hakkında bilgi almak istiyorum.`;
   const whatsappUrl = data.whatsapp_phone
