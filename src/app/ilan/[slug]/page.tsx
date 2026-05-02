@@ -1,3 +1,4 @@
+import ImageGallery from "@/components/listing/image-gallery";
 import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 
@@ -125,41 +126,7 @@ const images = (data.listing_images ?? [])
           {data.neighborhood ? ` / ${data.neighborhood}` : ""}
         </p>
 
-        <section className="mt-8 grid gap-4 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            {mainImage ? (
-              <img
-                src={mainImage}
-                alt={data.title}
-                className="h-[420px] w-full rounded-3xl border border-white/10 object-cover md:h-[520px]"
-              />
-            ) : (
-              <div className="flex h-[420px] w-full items-center justify-center rounded-3xl border border-white/10 bg-[#141414] text-gray-500 md:h-[520px]">
-                Fotoğraf yok
-              </div>
-            )}
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-2">
-            {sideImages.length > 0 ? (
-              sideImages.map((img) => (
-                <img
-                  key={img.id}
-                  src={img.image_url}
-                  alt={data.title}
-                  className="h-[200px] w-full rounded-2xl border border-white/10 object-cover md:h-[250px]"
-                />
-              ))
-            ) : (
-              <>
-                <div className="rounded-2xl border border-white/10 bg-[#141414]" />
-                <div className="rounded-2xl border border-white/10 bg-[#141414]" />
-                <div className="rounded-2xl border border-white/10 bg-[#141414]" />
-                <div className="rounded-2xl border border-white/10 bg-[#141414]" />
-              </>
-            )}
-          </div>
-        </section>
+        <ImageGallery images={images} title={data.title} />
 
         <section className="mt-8 grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-8">
