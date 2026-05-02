@@ -457,7 +457,7 @@ if (!user) {
   </label>
   <input
     name="contact_phone"
-    defaultValue="905551112233"
+    defaultValue=""
     placeholder="05551112233"
     className="w-full rounded-xl border border-white/10 bg-[#181818] px-4 py-3 outline-none focus:border-[#D4AF37]"
   />

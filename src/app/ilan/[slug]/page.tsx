@@ -216,21 +216,34 @@ const images = (data.listing_images ?? [])
             <div className="mt-8 rounded-3xl border border-white/10 bg-[#111111] p-6 shadow-xl md:p-8">
               <h2 className="text-2xl font-bold text-white">Ek Bilgiler</h2>
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/5 bg-[#181818] p-5">
-                  <p className="text-sm text-gray-400">İletişim Telefonu</p>
-                  <p className="mt-2 font-semibold text-white">
-                    {data.phone || "Belirtilmemiş"}
-                  </p>
-                </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
 
-                <div className="rounded-2xl border border-white/5 bg-[#181818] p-5">
-                  <p className="text-sm text-gray-400">WhatsApp</p>
-                  <p className="mt-2 font-semibold text-white">
-                    {data.whatsapp_phone || "Belirtilmemiş"}
-                  </p>
-                </div>
-              </div>
+  {data.phone === data.whatsapp_phone ? (
+    <div className="rounded-2xl border border-white/5 bg-[#181818] p-5 sm:col-span-2">
+      <p className="text-sm text-gray-400">İletişim</p>
+      <p className="mt-2 font-semibold text-white">
+        {data.phone || "Belirtilmemiş"}
+      </p>
+    </div>
+  ) : (
+    <>
+
+      <div className="rounded-2xl border border-white/5 bg-[#181818] p-5">
+        <p className="text-sm text-gray-400">İletişim Telefonu</p>
+        <p className="mt-2 font-semibold text-white">
+          {data.phone || "Belirtilmemiş"}
+        </p>
+      </div>
+
+      <div className="rounded-2xl border border-white/5 bg-[#181818] p-5">
+        <p className="text-sm text-gray-400">WhatsApp</p>
+        <p className="mt-2 font-semibold text-white">
+          {data.whatsapp_phone || "Belirtilmemiş"}
+        </p>
+      </div>
+    </>
+  )}
+</div>
             </div>
 
             {mapUrl && (
