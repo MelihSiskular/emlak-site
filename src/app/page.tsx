@@ -93,7 +93,7 @@ export default async function Home() {
           </nav>
 
           <a
-            href="https://wa.me/905551112233"
+            href="https://wa.me/905322806690"
             target="_blank"
             rel="noreferrer"
             className="rounded-xl bg-[#25D366] px-4 py-2 text-sm font-medium text-white transition hover:bg-[#1ebe5d]"
@@ -147,11 +147,11 @@ export default async function Home() {
             </div>
           </div>
 
- <div className="relative">
+<div className="relative">
   <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
-  <iframe
+    <iframe
   title="Kırklareli Ofis"
-  src="https://www.google.com/maps?q=Karakaş%20Mahallesi%20Manolya%20Sk%20No:6%20Kırklareli&z=17&output=embed"
+  src="https://www.google.com/maps?q=41.733737563913024,27.224792299612943&z=19&output=embed" 
   className="h-[420px] w-full rounded-2xl"
   loading="lazy"
 />
@@ -159,7 +159,10 @@ export default async function Home() {
 
   <div className="absolute -bottom-6 -left-4 rounded-2xl border border-white/10 bg-[#111111] p-4 shadow-xl">
     <p className="text-sm text-gray-400">Ofis Konumu</p>
-    <p className="mt-1 font-semibold text-white">Kırklareli Merkez</p>
+    <p className="mt-1 font-semibold text-white">
+      Karacibrahim Mah. Dere Üstü Sokak<br />
+      Saranta Plaza Kat 4 D24
+    </p>
   </div>
 </div>
         </div>
@@ -334,13 +337,13 @@ export default async function Home() {
 
             <div className="flex flex-wrap gap-3 md:justify-end">
               <a
-                href="tel:905551112233"
+                href="tel:905322806690"
                 className="rounded-xl bg-white px-6 py-3 font-medium text-black transition hover:bg-gray-200"
               >
                 Telefonla Ara
               </a>
               <a
-                href="https://wa.me/905551112233"
+                href="https://wa.me/905322806690"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-xl border border-white/15 bg-[#25D366] px-6 py-3 font-medium text-white transition hover:bg-white/10"
