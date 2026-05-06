@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
+import Image from "next/image";
 
 type ListingImage = {
   id: string;
@@ -61,9 +62,20 @@ export default async function Home() {
     <main className="min-h-screen bg-[#0a0a0a] text-white">
       <header className="sticky top-0 z-30 border-b border-white/10 bg-[#0a0a0a]/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="text-xl font-bold tracking-tight text-[#D4AF37]">
-            Kırklareli Emlak
-          </Link>
+         <Link
+  href="/"
+  className="flex items-center gap-3 text-xl font-bold tracking-tight text-[#D4AF37]"
+>
+  <Image
+    src="/logo.png"
+    alt="Kırklareli Emlak Logo"
+    width={40}
+    height={40}
+    className="rounded-full object-cover"
+  />
+
+  <span>Kırklareli Emlak</span>
+</Link>
 
           <nav className="hidden items-center gap-6 md:flex">
             <a href="#hero" className="text-sm text-gray-300 transition hover:text-white">
