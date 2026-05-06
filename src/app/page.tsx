@@ -71,7 +71,7 @@ export default async function Home() {
     alt="Kırklareli Emlak Logo"
     width={40}
     height={40}
-    className="rounded-full object-cover"
+    className="rounded-full border border-[#D4AF37]/30 object-cover"
   />
 
   <span>Kırklareli Emlak</span>
